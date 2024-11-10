@@ -1,0 +1,86 @@
+/* Jobs.css */
+
+* {
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif; /* Use a clean, sans-serif font */
+    background-color: #000; /* Set body background to black */
+    color: #fff; /* Set text color to white */
+  }
+  
+  .jobs-container {
+    padding: 20px; /* Add padding to the container */
+  }
+  
+  .jobs-title {
+    text-align: center; /* Center the main heading */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #ffcc00; /* Yellow color for heading */
+  }
+  
+  .jobs-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the list */
+  }
+  
+  .job-item {
+    background-color: #1a1a1a; /* Dark grey background for job listings */
+    border: 1px solid #444; /* Slightly lighter border for separation */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Space between job listings */
+    padding: 15px; /* Add padding */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .job-item:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+  }
+  
+  .job-name {
+    font-size: 1.75rem; /* Increase font size for job title */
+    color: #ffcc00; /* Yellow color for job title */
+    margin-bottom: 5px; /* Space below job title */
+  }
+  
+  .job-position,
+  .job-salary,
+  .job-location,
+  .job-phone {
+    margin: 5px 0; /* Space between paragraphs */
+    color: #ccc; /* Light grey color for text */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .jobs-title {
+      font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+  
+    .jobs-list {
+      padding: 0 10px; /* Add some padding for smaller screens */
+    }
+  
+    .job-item {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .job-name {
+      font-size: 1.5rem; /* Adjust job title size for smaller screens */
+    }
+  
+    .job-position,
+    .job-salary,
+    .job-location,
+    .job-phone {
+      font-size: 0.9rem; /* Adjust paragraph size for smaller screens */
+    }
+  }
+  

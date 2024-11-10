@@ -1,0 +1,89 @@
+/* Home.css */
+
+* {
+  margin: 0; /* Remove default margin from all elements */
+  padding: 0; /* Remove default padding from all elements */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+  margin: 0; /* Ensure body has no margin */
+}
+
+.home {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space items */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px; /* Add padding */
+  height: 100vh; /* Full viewport height */
+  text-align: left; /* Align text to the left */
+  font-family: 'Arial', sans-serif; /* Use a clean, sans-serif font */
+}
+
+.text-container {
+  max-width: 600px; /* Limit width for better readability */
+  margin-right: 20px; /* Add space between text and image */
+  flex: 1; /* Allow text container to grow and fill space */
+  z-index: 1; /* Ensure text is above the image */
+}
+
+.home h1 {
+  font-size: 3rem; /* Increase font size for better visibility */
+  margin: 0; /* Remove default margin */
+  color: yellow; /* Set color to yellow */
+  transition: transform 0.3s ease; /* Smooth transform transition for heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow for depth */
+}
+
+.home p {
+  font-size: 1.25rem; /* Slightly larger paragraph text */
+  margin-top: 15px; /* Space above paragraph */
+  line-height: 1.6; /* Increase line height for readability */
+  transition: color 0.3s ease; /* Smooth color transition for paragraph */
+}
+
+.home-image {
+  width: 50%; /* Set width to 50% of the container */
+  height: 100vh; /* Set height to full viewport height */
+  object-fit: cover; /* Maintain aspect ratio by cropping if needed */
+  border: none; /* Remove any border */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  box-shadow: none; /* Remove shadow for a flat effect */
+}
+
+/* Remove hover effect specifically for the image */
+/* .home:hover .home-image {
+  transform: scale(1.05);  // Removed for no image hover effect
+} */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .text-container {
+    margin-right: 0; /* Remove right margin on small screens */
+    margin-bottom: 20px; /* Add space below text on small screens */
+  }
+
+  .home-image {
+    width: 100%; /* Make image full width on small screens */
+    height: 90%; /* Maintain aspect ratio on small screens */
+    max-height: 50vh; /* Limit maximum height on small screens */
+  }
+
+  .home h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .home p {
+    font-size: 1rem; /* Adjust paragraph font size for smaller screens */
+  }
+}

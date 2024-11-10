@@ -1,0 +1,87 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .navbar:hover {
+    background-color: #111; /* Slightly lighter black on hover */
+  }
+  
+  .navbar h1 {
+    font-size: 1.8rem;
+    margin: 0; /* Remove default margin */
+    transition: transform 0.3s ease; /* Smooth transformation */
+    color: #ffd700;
+  }
+  
+  .navbar:hover h1 {
+    transform: scale(1.05); /* Slightly enlarge the title on hover */
+  }
+  
+  .navbar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Align items in a row */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .navbar ul li {
+    margin-left: 30px; /* Space between links */
+    position: relative; /* Position for pseudo-element */
+  }
+  
+  .navbar ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Medium weight */
+    padding: 5px 10px; /* Add padding for better clickable area */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+  }
+  
+  .navbar ul li a::after {
+    content: ''; /* Create a pseudo-element for underline */
+    position: absolute;
+    width: 100%; /* Full width underline */
+    height: 2px; /* Underline thickness */
+    background: #ffd700; /* Gold color for underline */
+    left: 0; /* Start from the left */
+    bottom: -5px; /* Position it below the text */
+    transform: scaleX(0); /* Start with scaleX of 0 for animation */
+    transition: transform 0.3s ease; /* Smooth transition for underline */
+  }
+  
+  .navbar ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  .navbar ul li a:hover::after {
+    transform: scaleX(1); /* Expand underline on hover */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack items on small screens */
+      align-items: flex-start; /* Align to the left */
+    }
+    
+    .navbar ul {
+      flex-direction: column; /* Stack links vertically */
+      margin-top: 10px; /* Add spacing above links */
+    }
+  
+    .navbar ul li {
+      margin-left: 0; /* Remove left margin for stacked items */
+      margin-bottom: 10px; /* Space between links */
+    }
+  }
+  
